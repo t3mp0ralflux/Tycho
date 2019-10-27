@@ -13,7 +13,7 @@ namespace TRMDataManager.Controllers
             var userId = RequestContext.Principal.Identity.GetUserId();
             var userName = RequestContext.Principal.Identity.GetUserName();
 
-            return new string[] { "value1", "value2", userId, userName };
+            return new [] { "value1", "value2", userId, userName };
         }
 
         // GET api/values/5
