@@ -32,9 +32,11 @@ namespace TRMDesktopUI
             // Singleton is just one instance of the class for the scope of the entire application.  If ShellViewModel asks for the aggregator, it gets back the first one ever created.
             // If a different viewmodel asks, it gets the same one.  One instance to handle everything.  Kinda like a static class, but not quite.
             // Singleton's are a 'use-as-last-resort' type deal due to memory issues.  Only use it if you really have no other options, which Caliburn kinda forces.
+            // Only one instance at per application run.
             _container
                 .Singleton<IWindowManager, WindowManager>()
-                .Singleton<IEventAggregator, EventAggregator>();
+                .Singleton<IEventAggregator, EventAggregator>()
+                .Singleton<IAPIHelper, APIHelper>();
 
             // Small performance hit for this reflection, but it's cool as it only happens once on load and then never again.
             // Get all types of current assembly where the type is a class and ends with ViewModel (ShellViewModel for example)
