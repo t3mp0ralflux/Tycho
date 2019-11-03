@@ -47,7 +47,7 @@ namespace TRMDesktopUI.ViewModels
             get
             {
                 // They are null on startup, have to double check em
-                var output = UserName?.Length > 0 && Password?.Length > 0;
+                var output = UserName?.Length > 0 && Password?.Length > 0 && !string.IsNullOrWhiteSpace(UserName) && !string.IsNullOrWhiteSpace(Password);
 
                 return output;
             }
