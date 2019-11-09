@@ -2,6 +2,7 @@
 using System.Threading.Tasks;
 using Caliburn.Micro;
 using TRMDesktopUI.Helpers;
+using TRMDesktopUI.Library.API;
 
 namespace TRMDesktopUI.ViewModels
 {
@@ -81,6 +82,8 @@ namespace TRMDesktopUI.ViewModels
                 // Continues if success
                 ErrorMessage = string.Empty;
                 var result = await _apiHelper.Authenticate(UserName, Password);
+
+                // Capture more info about the user
             }
             catch (Exception e)
             {

@@ -5,6 +5,7 @@ using System.Windows;
 using System.Windows.Controls;
 using Caliburn.Micro;
 using TRMDesktopUI.Helpers;
+using TRMDesktopUI.Library.API;
 using TRMDesktopUI.ViewModels;
 
 namespace TRMDesktopUI
