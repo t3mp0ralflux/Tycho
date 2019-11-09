@@ -6,6 +6,7 @@ using System.Windows.Controls;
 using Caliburn.Micro;
 using TRMDesktopUI.Helpers;
 using TRMDesktopUI.Library.API;
+using TRMDesktopUI.Library.Models;
 using TRMDesktopUI.ViewModels;
 
 namespace TRMDesktopUI
@@ -37,6 +38,7 @@ namespace TRMDesktopUI
             _container
                 .Singleton<IWindowManager, WindowManager>()
                 .Singleton<IEventAggregator, EventAggregator>()
+                .Singleton<ILoggedInUserModel, LoggedInUserModel>()
                 .Singleton<IAPIHelper, APIHelper>();
 
             // Small performance hit for this reflection, but it's cool as it only happens once on load and then never again.

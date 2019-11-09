@@ -51,7 +51,8 @@
     <Compile Include="API\APIHelper.cs" />
     <Compile Include="API\IAPIHelper.cs" />
     <Compile Include="Models\AuthenticatedUser.cs" />
-    <Compile Include="Models\LoggerInUserModel.cs" />
+    <Compile Include="Models\ILoggedInUserModel.cs" />
+    <Compile Include="Models\LoggedInUserModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

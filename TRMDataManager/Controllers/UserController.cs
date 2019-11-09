@@ -10,6 +10,7 @@ namespace TRMDataManager.Controllers
     [Authorize]
     public class UserController : ApiController
     {
+        [HttpGet]
         public UserModel GetById()
         {
             var userId = RequestContext.Principal.Identity.GetUserId();
