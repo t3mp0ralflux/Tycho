@@ -1,18 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Caliburn.Micro;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Caliburn.Micro;
 
 namespace TRMDesktopUI.ViewModels
 {
     public class SalesViewModel : Screen
     {
-        private BindingList<string> _products;
-        private string _itemQuantity;
         private BindingList<string> _cart;
+        private BindingList<string> _products;
+        private int _itemQuantity;
 
         public BindingList<string> Products
         {
@@ -24,7 +19,7 @@ namespace TRMDesktopUI.ViewModels
             }
         }
 
-        public string ItemQuantity
+        public int ItemQuantity
         {
             get => _itemQuantity;
             set
