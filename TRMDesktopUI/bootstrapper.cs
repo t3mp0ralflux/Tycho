@@ -28,7 +28,8 @@ namespace TRMDesktopUI
 
         protected override void Configure()
         {
-            _container.Instance(_container);
+            _container.Instance(_container)
+                .PerRequest<IProductEndpoint, ProductEndpoint>();
 
             // WindowManager is the handling of windows, EventAggregator is the event raiser.
             // Singleton is just one instance of the class for the scope of the entire application.  If ShellViewModel asks for the aggregator, it gets back the first one ever created.
